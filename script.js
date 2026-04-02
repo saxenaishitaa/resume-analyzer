@@ -18,7 +18,9 @@ else if(role === "java"){
 let jdWords = jobDesc.split(" ");
 
 jdWords.forEach(word => {
-    if(word.length > 4 && !keywords.includes(word)){
+    let commonWords = ["with", "this", "that", "have", "from", "your", "will"];
+
+if(word.length > 4 && !commonWords.includes(word) && !keywords.includes(word)){
         keywords.push(word);
     }
 });
@@ -76,6 +78,7 @@ function handleFile() {
 
             Promise.all(pages).then(() => {
                 document.getElementById("resumeText").value = text;
+                alert("PDF loaded successfully! You can now analyze your resume.");
             });
         });
     };
