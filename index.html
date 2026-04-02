@@ -2,19 +2,26 @@
 <html>
 <head>
     <title>Resume Analyzer</title>
+    <p style="color: #70040a9c; font-size: 30px;">
+  Analyze your resume based on job roles and improve your chances of selection 🚀
+</p>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
 </head>
 <body>
 
     <div class="container">
         <h1>🚀ATS Resume Checker🚀 </h1>
+        <input type="file" id="fileInput" accept=".pdf" onchange="handleFile()">
         <textarea id="resumeText" placeholder="Paste your resume here..."></textarea>
+        <textarea id="jobDesc" placeholder="Paste job description here..."></textarea>
         <select id="role">
     <option value="frontend">Frontend Developer</option>
     <option value="backend">Backend Developer</option>
     <option value="java">Java Developer</option>
 </select>
         <button onclick="analyzeResume()">Analyze Resume</button>
+        <button onclick="clearText()">Clear</button>
         <div class="progress-container">
     <div id="progress-bar"></div>
 </div>
