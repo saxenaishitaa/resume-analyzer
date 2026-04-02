@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🚀ATS Resume Checker🚀 </h1>
+        <textarea id="resumeText" placeholder="Paste your resume here..."></textarea>
+        <select id="role">
+    <option value="frontend">Frontend Developer</option>
+    <option value="backend">Backend Developer</option>
+    <option value="java">Java Developer</option>
+</select>
+        <button onclick="analyzeResume()">Analyze Resume</button>
+        <div class="progress-container">
+    <div id="progress-bar"></div>
+</div>
+
+        <h2 id="score"></h2>
+        <h3 id="suggestions"></h3>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
